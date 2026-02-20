@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bdh7najgc4eup"]
+
+[ext_resource type="Script" uid="uid://b7mnjofsqo2rw" path="res://Scripts/makeup_brush_soft.gd" id="1_14o72"]
+
+[node name="Node2D" type="Node2D" unique_id=1566636509]
+script = ExtResource("1_14o72")
