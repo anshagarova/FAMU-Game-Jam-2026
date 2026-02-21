@@ -6,7 +6,8 @@ signal clear_requested()
 @export var colors: Array[Color] = [
 	Color(0.78, 0.12, 0.22),
 	Color(0.55, 0.08, 0.25),
-	Color(0.90, 0.35, 0.40)
+	Color(0.90, 0.35, 0.40),
+	Color(0.10, 0.05, 0.80)
 ]
 
 var _active_index: int = 0
