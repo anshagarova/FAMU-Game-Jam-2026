@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c57eepp7kndgq"]
 
-[ext_resource type="Script" uid="uid://bbmiuafq3nq1w" path="res://Scripts/finish_game.gd" id="1_r6inw"]
+[ext_resource type="Script" uid="uid://b8s6t4gj7rl43" path="res://Scripts/finish_game_player1.gd" id="1_yknbp"]
 [ext_resource type="Texture2D" uid="uid://dvu6jmlnh0dab" path="res://Assets/with_makeup/01.png" id="2_yknbp"]
 
 [node name="Node2D" type="Node2D" unique_id=1386147034]
@@ -10,7 +10,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("1_r6inw")
+script = ExtResource("1_yknbp")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Control" unique_id=1426065605]
 custom_minimum_size = Vector2(200, 50)

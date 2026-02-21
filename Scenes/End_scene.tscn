@@ -1,14 +1,18 @@
 [gd_scene format=3 uid="uid://di1kdgjgrp32k"]
 
 [ext_resource type="Script" uid="uid://c05uxsihrx1in" path="res://Scripts/end_scene.gd" id="1_ebg4k"]
+[ext_resource type="Texture2D" uid="uid://dvu6jmlnh0dab" path="res://Assets/with_makeup/01.png" id="2_nmk6v"]
 
 [node name="Node2D" type="Node2D" unique_id=1308360712]
 script = ExtResource("1_ebg4k")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1893854003]
 position = Vector2(673, 475)
+scale = Vector2(0.5, 0.5)
 
 [node name="FileDialog" type="FileDialog" parent="." unique_id=1619764218]
+access = 2
+use_native_dialog = true
 
 [node name="SaveImageButton" type="Button" parent="." unique_id=2060540523]
 offset_left = 19.0
@@ -16,3 +20,16 @@ offset_top = 60.0
 offset_right = 27.0
 offset_bottom = 68.0
 text = "Save"
+
+[node name="PercentageDisplay" type="Label" parent="." unique_id=1527757891]
+offset_left = 144.0
+offset_top = 780.0
+offset_right = 451.0
+offset_bottom = 955.0
+theme_override_font_sizes/font_size = 128
+text = "TEstt"
+
+[node name="01" type="Sprite2D" parent="." unique_id=1139801416]
+position = Vector2(1484, 445)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_nmk6v")

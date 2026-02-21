@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bbmiuafq3nq1w" path="res://Scripts/finish_game.gd" id="1_l3078"]
 [ext_resource type="Texture2D" uid="uid://dkffh4ygivjjl" path="res://Assets/blank_faces/01.png" id="3_brglg"]
 [ext_resource type="PackedScene" uid="uid://bdh7najgc4eup" path="res://Scenes/Scene.tscn" id="3_xrq23"]
+[ext_resource type="Texture2D" uid="uid://7jf47ii25y87" path="res://Assets/hair/01.png" id="4_xrq23"]
 
 [node name="Node2D" type="Node2D" unique_id=1830257192]
 
@@ -26,11 +27,53 @@ custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
 text = "Finish"
 
+[node name="Hair1Button" type="Button" parent="Control" unique_id=185456730]
+layout_mode = 0
+offset_left = 1481.0
+offset_top = 215.0
+offset_right = 1541.0
+offset_bottom = 246.0
+text = "HAIR 1"
+
+[node name="Hair2Button" type="Button" parent="Control" unique_id=1518693026]
+layout_mode = 0
+offset_left = 1548.0
+offset_top = 215.0
+offset_right = 1608.0
+offset_bottom = 246.0
+text = "HAIR 2"
+
+[node name="Hair3Button" type="Button" parent="Control" unique_id=1608627268]
+layout_mode = 0
+offset_left = 1615.0
+offset_top = 215.0
+offset_right = 1675.0
+offset_bottom = 246.0
+text = "HAIR 3
+"
+
+[node name="Hair4Button" type="Button" parent="Control" unique_id=686968751]
+layout_mode = 0
+offset_left = 1481.0
+offset_top = 251.0
+offset_right = 1541.0
+offset_bottom = 282.0
+text = "HAIR 4
+"
+
 [node name="paintingScene" parent="." unique_id=1749975836 instance=ExtResource("3_xrq23")]
 unique_name_in_owner = true
 
 [node name="01" type="Sprite2D" parent="." unique_id=1120169525]
-z_index = -1
+modulate = Color(1, 1, 1, 0.019607844)
+z_index = -2
 position = Vector2(960, 570)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_brglg")
+
+[node name="Hair" type="Sprite2D" parent="." unique_id=1280321256]
+unique_name_in_owner = true
+z_index = -1
+position = Vector2(960, 520)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_xrq23")

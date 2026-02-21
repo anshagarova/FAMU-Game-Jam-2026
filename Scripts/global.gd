@@ -1,6 +1,7 @@
 extends Node
 
 var final_image: Image
+var mean: float
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

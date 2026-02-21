@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://rm5lmfbccnxx"]
 
 [ext_resource type="Script" uid="uid://b5raugq6p6e8y" path="res://Scripts/start_menu.gd" id="1_6remo"]
+[ext_resource type="Texture2D" uid="uid://cli03in4nqmhw" path="res://Assets/menu_bg.jpg" id="2_vset1"]
+[ext_resource type="VideoStream" uid="uid://dp8grnapu8n0u" path="res://Assets/dum_a_dest.ogv" id="3_u88ce"]
 
 [node name="Control" type="Control" unique_id=2065581739]
 layout_mode = 3
@@ -24,3 +26,21 @@ alignment = 1
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
 text = "Play"
+
+[node name="MenuBg" type="Sprite2D" parent="." unique_id=369857806]
+visible = false
+z_index = -1
+position = Vector2(960, 540)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_vset1")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=2127656543]
+z_index = -1
+layout_mode = 0
+offset_right = 2048.0
+offset_bottom = 1150.0
+mouse_filter = 2
+mouse_behavior_recursive = 1
+stream = ExtResource("3_u88ce")
+autoplay = true
+loop = true

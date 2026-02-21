@@ -1,11 +1,30 @@
 [gd_scene format=3 uid="uid://bwjgwkn7ld6n2"]
 
 [ext_resource type="Script" uid="uid://x0irgr666fky" path="res://Scripts/menu.gd" id="1_wroy6"]
+[ext_resource type="VideoStream" uid="uid://dp8grnapu8n0u" path="res://Assets/dum_a_dest.ogv" id="2_emfgf"]
 
 [node name="Control" type="Control" unique_id=751186852]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_wroy6")
+
+[node name="PlayAsPlayer1" type="Button" parent="." unique_id=590934932]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 0
+offset_left = 562.0
+offset_top = 715.0
+offset_right = 762.0
+offset_bottom = 765.0
+text = "Play as a friend"
+
+[node name="PlayAsPlayer2" type="Button" parent="." unique_id=1917124320]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 0
+offset_left = 1167.0
+offset_top = 650.0
+offset_right = 1367.0
+offset_bottom = 700.0
+text = "Play as a vampire"
 
 [node name="VBoxContainer" type="HBoxContainer" parent="." unique_id=1553056176]
 layout_mode = 1
@@ -23,15 +42,16 @@ grow_vertical = 0
 theme_override_constants/separation = 50
 alignment = 1
 
-[node name="PlayAsPlayer1" type="Button" parent="VBoxContainer" unique_id=590934932]
-custom_minimum_size = Vector2(200, 0)
-layout_mode = 2
-text = "Play as a friend"
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=812053211]
+z_index = -1
+layout_mode = 0
+offset_right = 2048.0
+offset_bottom = 1150.0
+mouse_filter = 2
+mouse_behavior_recursive = 1
+stream = ExtResource("2_emfgf")
+autoplay = true
+loop = true
 
-[node name="PlayAsPlayer2" type="Button" parent="VBoxContainer" unique_id=1917124320]
-custom_minimum_size = Vector2(200, 50)
-layout_mode = 2
-text = "Play as a vampire"
-
-[connection signal="pressed" from="VBoxContainer/PlayAsPlayer1" to="." method="_on_play_as_player_1_pressed"]
-[connection signal="pressed" from="VBoxContainer/PlayAsPlayer2" to="." method="_on_play_as_player_2_pressed"]
+[connection signal="pressed" from="PlayAsPlayer1" to="." method="_on_play_as_player_1_pressed"]
+[connection signal="pressed" from="PlayAsPlayer2" to="." method="_on_play_as_player_2_pressed"]
