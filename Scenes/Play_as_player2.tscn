@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bbmiuafq3nq1w" path="res://Scripts/finish_game.gd" id="1_l3078"]
 [ext_resource type="Texture2D" uid="uid://dkffh4ygivjjl" path="res://Assets/blank_faces/01.png" id="3_brglg"]
 [ext_resource type="PackedScene" uid="uid://bdh7najgc4eup" path="res://Scenes/Scene.tscn" id="3_xrq23"]
+[ext_resource type="AudioStream" uid="uid://bdau2iv7r1n6s" path="res://Assets/sound/game final.ogg" id="5_8lwgr"]
 [ext_resource type="Texture2D" uid="uid://dx74v4mobgwsr" path="res://Assets/bathroom_bg.png" id="5_330lq"]
 
 [node name="Node2D" type="Node2D" unique_id=1830257192]
@@ -101,3 +102,9 @@ z_index = -5
 position = Vector2(960, 540)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("5_330lq")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=817772083]
+stream = ExtResource("5_8lwgr")
+volume_db = -4.09
+autoplay = true
+parameters/looping = true

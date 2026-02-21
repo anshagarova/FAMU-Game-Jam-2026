@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c05uxsihrx1in" path="res://Scripts/end_scene.gd" id="1_ebg4k"]
 [ext_resource type="Texture2D" uid="uid://dvu6jmlnh0dab" path="res://Assets/with_makeup/01.png" id="2_nmk6v"]
+[ext_resource type="AudioStream" uid="uid://c2oxguph3eg1r" path="res://Assets/sound/ending final final.mp3" id="3_6hv0t"]
 
 [node name="Node2D" type="Node2D" unique_id=1308360712]
 script = ExtResource("1_ebg4k")
@@ -33,3 +34,8 @@ text = "TEstt"
 position = Vector2(1484, 445)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_nmk6v")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=880936289]
+stream = ExtResource("3_6hv0t")
+autoplay = true
+parameters/looping = true
