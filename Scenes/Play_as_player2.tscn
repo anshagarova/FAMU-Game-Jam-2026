@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bbmiuafq3nq1w" path="res://Scripts/finish_game.gd" id="1_l3078"]
 [ext_resource type="Texture2D" uid="uid://dkffh4ygivjjl" path="res://Assets/blank_faces/01.png" id="3_brglg"]
 [ext_resource type="PackedScene" uid="uid://bdh7najgc4eup" path="res://Scenes/Scene.tscn" id="3_xrq23"]
-[ext_resource type="Texture2D" uid="uid://7jf47ii25y87" path="res://Assets/hair/01.png" id="4_xrq23"]
+[ext_resource type="Texture2D" uid="uid://dx74v4mobgwsr" path="res://Assets/bathroom_bg.png" id="5_330lq"]
 
 [node name="Node2D" type="Node2D" unique_id=1830257192]
 
@@ -61,10 +61,29 @@ offset_bottom = 282.0
 text = "HAIR 4
 "
 
+[node name="Hair5Button" type="Button" parent="Control" unique_id=1378166672]
+layout_mode = 0
+offset_left = 1548.0
+offset_top = 251.0
+offset_right = 1608.0
+offset_bottom = 282.0
+text = "HAIR 5
+"
+
+[node name="Hair6Button" type="Button" parent="Control" unique_id=1266228935]
+layout_mode = 0
+offset_left = 1614.0
+offset_top = 251.0
+offset_right = 1674.0
+offset_bottom = 282.0
+text = "HAIR 6
+"
+
 [node name="paintingScene" parent="." unique_id=1749975836 instance=ExtResource("3_xrq23")]
 unique_name_in_owner = true
 
 [node name="01" type="Sprite2D" parent="." unique_id=1120169525]
+visible = false
 modulate = Color(1, 1, 1, 0.019607844)
 z_index = -2
 position = Vector2(960, 570)
@@ -76,4 +95,9 @@ unique_name_in_owner = true
 z_index = -1
 position = Vector2(960, 520)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("4_xrq23")
+
+[node name="BathroomBg" type="Sprite2D" parent="." unique_id=949589626]
+z_index = -5
+position = Vector2(960, 540)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_330lq")
