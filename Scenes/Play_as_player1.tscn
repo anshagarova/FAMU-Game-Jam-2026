@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c57eepp7kndgq"]
 
 [ext_resource type="Script" uid="uid://bbmiuafq3nq1w" path="res://Scripts/finish_game.gd" id="1_r6inw"]
+[ext_resource type="Texture2D" uid="uid://du4gp3ikn3du7" path="res://Assets/face_with_makeup_01.png" id="2_yknbp"]
 
 [node name="Node2D" type="Node2D" unique_id=1386147034]
 
@@ -23,5 +24,10 @@ offset_bottom = 626.0
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
 text = "Finish"
+
+[node name="FaceWithMakeup01" type="Sprite2D" parent="." unique_id=447371492]
+position = Vector2(586, 339.00003)
+scale = Vector2(0.7318105, 0.7318105)
+texture = ExtResource("2_yknbp")
 
 [connection signal="pressed" from="Control/HBoxContainer/FinishButton" to="Control" method="_on_button_pressed"]

@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://utcn34f7xnik"]
 
 [ext_resource type="Script" uid="uid://bbmiuafq3nq1w" path="res://Scripts/finish_game.gd" id="1_l3078"]
+[ext_resource type="Texture2D" uid="uid://cthlmd1xcw7mo" path="res://Assets/face_without_makeup_01.png" id="2_brglg"]
+[ext_resource type="PackedScene" uid="uid://bdh7najgc4eup" path="res://Scenes/Scene.tscn" id="3_xrq23"]
 
 [node name="Node2D" type="Node2D" unique_id=1830257192]
 
@@ -23,3 +25,10 @@ offset_bottom = 624.0
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
 text = "Finish"
+
+[node name="FaceWithoutMakeup01" type="Sprite2D" parent="." unique_id=1831049351]
+position = Vector2(571, 353.00003)
+scale = Vector2(0.8012472, 0.8012472)
+texture = ExtResource("2_brglg")
+
+[node name="Node2D" parent="." unique_id=1749975836 instance=ExtResource("3_xrq23")]
