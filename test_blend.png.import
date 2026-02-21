@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bf57ca5mf6y57"
-path="res://.godot/imported/makeup-brush-png-2.png-f0fd12bd5bbdeda08f770af6dc23cd69.ctex"
+uid="uid://bufv4nln78e00"
+path="res://.godot/imported/test_blend.png-a13f0a261f39166a0d5d0b76154a64e2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/makeup-brush-png-2.png"
-dest_files=["res://.godot/imported/makeup-brush-png-2.png-f0fd12bd5bbdeda08f770af6dc23cd69.ctex"]
+source_file="res://test_blend.png"
+dest_files=["res://.godot/imported/test_blend.png-a13f0a261f39166a0d5d0b76154a64e2.ctex"]
 
 [params]
 

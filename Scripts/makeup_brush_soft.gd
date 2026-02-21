@@ -39,6 +39,8 @@ func _init_canvas():
 	add_child(_sprite)
 	
 func _input(event: InputEvent) -> void:
+	if ActiveBrush.current_brush_style != "thick":
+			return
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			if event.pressed:

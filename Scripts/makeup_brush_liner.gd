@@ -40,6 +40,8 @@ func _ready():
 		push_warning("No palette assigned")
 
 func _input(event):
+	if ActiveBrush.current_brush_style != "thin":
+		return
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			drawing = event.pressed
