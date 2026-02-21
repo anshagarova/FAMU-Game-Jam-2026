@@ -1,3 +1,27 @@
 [gd_scene format=3 uid="uid://c57eepp7kndgq"]
 
+[ext_resource type="Script" uid="uid://bbmiuafq3nq1w" path="res://Scripts/finish_game.gd" id="1_r6inw"]
+
 [node name="Node2D" type="Node2D" unique_id=1386147034]
+
+[node name="Control" type="Control" parent="." unique_id=899548194]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_r6inw")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control" unique_id=1426065605]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 0
+offset_left = 918.0
+offset_top = 576.0
+offset_right = 1118.0
+offset_bottom = 626.0
+
+[node name="FinishButton" type="Button" parent="Control/HBoxContainer" unique_id=458195678]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+text = "Finish"
+
+[connection signal="pressed" from="Control/HBoxContainer/FinishButton" to="Control" method="_on_button_pressed"]
