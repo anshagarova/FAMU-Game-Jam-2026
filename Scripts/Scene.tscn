@@ -1,6 +1,20 @@
 [gd_scene format=3 uid="uid://bdh7najgc4eup"]
 
-[ext_resource type="Script" uid="uid://b7mnjofsqo2rw" path="res://Scripts/makeup_brush_soft.gd" id="1_14o72"]
+[ext_resource type="Script" uid="uid://b7mnjofsqo2rw" path="res://Scripts/makeup_brush_soft.gd" id="1_pjifk"]
+[ext_resource type="Script" uid="uid://c41lmpi2r4qhm" path="res://Scripts/pallet.gd" id="2_mx7i8"]
+[ext_resource type="Script" uid="uid://bx83igllljdg" path="res://Scripts/controller.gd" id="3_pjifk"]
 
-[node name="Node2D" type="Node2D" unique_id=1566636509]
-script = ExtResource("1_14o72")
+[node name="Node2D" type="Node2D" unique_id=1749975836]
+
+[node name="Brush" type="Node2D" parent="." unique_id=1683283584 node_paths=PackedStringArray("palette")]
+script = ExtResource("1_pjifk")
+palette = NodePath("../Pallet")
+
+[node name="Pallet" type="Control" parent="." unique_id=1676433088]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("2_mx7i8")
+
+[node name="Controller" type="Node2D" parent="." unique_id=4187562]
+script = ExtResource("3_pjifk")
+brush_node = NodePath("../Brush")
