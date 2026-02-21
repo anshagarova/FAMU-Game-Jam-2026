@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://utcn34f7xnik"]
 
 [ext_resource type="Script" uid="uid://bbmiuafq3nq1w" path="res://Scripts/finish_game.gd" id="1_l3078"]
-[ext_resource type="Texture2D" uid="uid://cthlmd1xcw7mo" path="res://Assets/face_without_makeup_01.png" id="2_brglg"]
+[ext_resource type="Texture2D" uid="uid://dkffh4ygivjjl" path="res://Assets/blank_faces/01.png" id="3_brglg"]
 [ext_resource type="PackedScene" uid="uid://bdh7najgc4eup" path="res://Scenes/Scene.tscn" id="3_xrq23"]
 
 [node name="Node2D" type="Node2D" unique_id=1830257192]
@@ -16,19 +16,21 @@ script = ExtResource("1_l3078")
 [node name="HBoxContainer" type="HBoxContainer" parent="Control" unique_id=950133625]
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 0
-offset_left = 918.0
-offset_top = 574.0
-offset_right = 1118.0
-offset_bottom = 624.0
+offset_left = 1614.0
+offset_top = 946.0
+offset_right = 1814.0
+offset_bottom = 996.0
 
 [node name="FinishButton" type="Button" parent="Control/HBoxContainer" unique_id=1144660717]
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
 text = "Finish"
 
-[node name="FaceWithoutMakeup01" type="Sprite2D" parent="." unique_id=1831049351]
-position = Vector2(571, 353.00003)
-scale = Vector2(0.8012472, 0.8012472)
-texture = ExtResource("2_brglg")
+[node name="paintingScene" parent="." unique_id=1749975836 instance=ExtResource("3_xrq23")]
+unique_name_in_owner = true
 
-[node name="Node2D" parent="." unique_id=1749975836 instance=ExtResource("3_xrq23")]
+[node name="01" type="Sprite2D" parent="." unique_id=1120169525]
+z_index = -1
+position = Vector2(960, 570)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_brglg")

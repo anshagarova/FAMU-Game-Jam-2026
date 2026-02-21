@@ -1,3 +1,18 @@
 [gd_scene format=3 uid="uid://di1kdgjgrp32k"]
 
+[ext_resource type="Script" uid="uid://c05uxsihrx1in" path="res://Scripts/end_scene.gd" id="1_ebg4k"]
+
 [node name="Node2D" type="Node2D" unique_id=1308360712]
+script = ExtResource("1_ebg4k")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1893854003]
+position = Vector2(673, 475)
+
+[node name="FileDialog" type="FileDialog" parent="." unique_id=1619764218]
+
+[node name="SaveImageButton" type="Button" parent="." unique_id=2060540523]
+offset_left = 19.0
+offset_top = 60.0
+offset_right = 27.0
+offset_bottom = 68.0
+text = "Save"
