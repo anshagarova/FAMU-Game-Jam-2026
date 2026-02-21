@@ -21,7 +21,7 @@ func _init_ui():
 	const SWATCH_SIZE = 36
 	const SWATCH_PAD  = 4
 
-	for i in colors.size():
+	for i in range(colors.size()):
 		var swatch = Panel.new()
 		swatch.custom_minimum_size = Vector2(SWATCH_SIZE, SWATCH_SIZE)
 		swatch.size = Vector2(SWATCH_SIZE, SWATCH_SIZE)
@@ -50,7 +50,7 @@ func _on_swatch_input(event: InputEvent, index: int):
 func _select_swatch(index: int):
 	_active_index = index
 
-	for i in _swatches.size():
+	for i in range(_swatches.size()):
 		var style = StyleBoxFlat.new()
 		style.bg_color = Color(0, 0, 0, 0)
 		if i == index:

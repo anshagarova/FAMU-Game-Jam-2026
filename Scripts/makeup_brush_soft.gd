@@ -1,8 +1,6 @@
 @tool
 extends Node2D
 
-var brush_color: Color = Color(0.85, 0.4, 0.55, 1.0)
-
 @export var brush_radius: float = 30.0
 @export var softness: float = 0.85
 @export var bristle_count: int = 120
@@ -17,6 +15,7 @@ var _sprite: Sprite2D
 var _rng := RandomNumberGenerator.new()
 var _last_pos: Vector2 = Vector2.INF
 var _painting: bool = false
+var brush_color: Color = Color(0.85, 0.4, 0.55, 1.0)
 
 func _ready() -> void:
 	_rng.randomize()
@@ -38,6 +37,16 @@ func _init_canvas():
 	_sprite.centered = false
 	_sprite.position = Vector2.ZERO
 	add_child(_sprite)
+	
+func _input(event: InputEvent) -> void:
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT:
+			if event.pressed:
+				start_painting(event.position)
+			else:
+				stop_painting()
+	elif event is InputEventMouseMotion:
+		paint_motion(event.position)
 
 func set_brush_color(c: Color):
 	brush_color = c

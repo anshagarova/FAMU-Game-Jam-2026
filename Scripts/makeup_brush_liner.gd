@@ -1,12 +1,14 @@
 @tool
 extends Node2D
-var drawing = false
-var strokes = []
-var current_stroke = []
+
 @export var max_width: float = 6.0
 @export var min_width: float = 0.0
 @export var tip_sharpness: float = 0.18
 @export var palette: Node
+
+var drawing = false
+var strokes = []
+var current_stroke = []
 var brush_color: Color = Color.RED
 var _canvas: Image
 var _texture: ImageTexture

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bdh7najgc4eup"]
 
-[ext_resource type="Script" uid="uid://bfb6vl55ojujh" path="res://Scripts/makeup_brush_liner.gd" id="1_1o454"]
+[ext_resource type="Script" uid="uid://cojdru6mquk5y" path="res://Scripts/hair_brush.gd" id="1_1o454"]
 [ext_resource type="Script" uid="uid://c41lmpi2r4qhm" path="res://Scripts/pallet.gd" id="2_o8g73"]
 [ext_resource type="Script" uid="uid://bx83igllljdg" path="res://Scripts/controller.gd" id="3_v3fvj"]
 
@@ -8,6 +8,7 @@
 
 [node name="Brush" type="Node2D" parent="." unique_id=1683283584 node_paths=PackedStringArray("palette")]
 script = ExtResource("1_1o454")
+brush_radius = 30.0
 palette = NodePath("../Pallet")
 
 [node name="Pallet" type="Control" parent="." unique_id=1676433088]
