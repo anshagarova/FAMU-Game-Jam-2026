@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bdh7najgc4eup"]
 
-[ext_resource type="Script" path="res://Scripts/brush_switcher.gd" id="1_1o454"]
+[ext_resource type="Script" uid="uid://btyxwt27wje37" path="res://Scripts/brush_switcher.gd" id="1_1o454"]
 [ext_resource type="Script" uid="uid://c41lmpi2r4qhm" path="res://Scripts/pallet.gd" id="2_o8g73"]
-[ext_resource type="Script" path="res://Scripts/makeup_brush_liner.gd" id="2_v3fvj"]
+[ext_resource type="Script" uid="uid://bfb6vl55ojujh" path="res://Scripts/makeup_brush_liner.gd" id="2_v3fvj"]
 [ext_resource type="Script" uid="uid://b7mnjofsqo2rw" path="res://Scripts/makeup_brush_soft.gd" id="3_qswnl"]
 [ext_resource type="Script" uid="uid://bx83igllljdg" path="res://Scripts/controller.gd" id="3_v3fvj"]
 [ext_resource type="Script" uid="uid://bkeswuixc4f" path="res://Scripts/makeup_brush_lipstick.gd" id="4_qswnl"]
@@ -41,6 +41,7 @@ text = "Medium Brush"
 [node name="ThinBrush" type="Node2D" parent="." unique_id=1683283584 node_paths=PackedStringArray("palette")]
 material = SubResource("CanvasItemMaterial_qswnl")
 script = ExtResource("2_v3fvj")
+min_width = 0.0
 palette = NodePath("../Pallet")
 
 [node name="SoftBrush" type="Node2D" parent="." unique_id=702286414 node_paths=PackedStringArray("palette")]
@@ -55,6 +56,7 @@ palette = NodePath("../Pallet")
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("2_o8g73")
+colors = Array[Color]([Color(0.33333334, 0.34117648, 0.8039216, 1), Color(0.13725491, 0.3529412, 0.54901963, 1), Color(0.21568628, 0.50980395, 0.68235296, 1), Color(0.27450982, 0.6431373, 0.65882355, 1), Color(0.42352942, 0.57254905, 0.6039216, 1), Color(0.70980394, 0.8235294, 0.99607843, 1), Color(0.75686276, 0.9137255, 0.94509804, 1), Color(0.972549, 0.972549, 0.972549, 1), Color(0.99215686, 0.8784314, 0.3529412, 1), Color(0.88235295, 0.61960787, 0.32941177, 1), Color(0.7372549, 0.40392157, 0.34509805, 1), Color(0.62352943, 0.2784314, 0.13333334, 1), Color(0.76862746, 0.08235294, 0.023529412, 1), Color(0.5294118, 0.12941177, 0.12156863, 1), Color(0.25490198, 0.101960786, 0, 1), Color(0.44705883, 0.22745098, 0.2784314, 1), Color(0.6117647, 0.27450982, 0.34901962, 1), Color(0.72156864, 0.34509805, 0.36078432, 1), Color(0.8, 0.46666667, 0.5411765, 1), Color(0.8117647, 0.7019608, 0.69803923, 1), Color(0.47058824, 0.61960787, 0.5137255, 1), Color(0.22352941, 0.6, 0.11372549, 1), Color(0.20392157, 0.27450982, 0.21960784, 1), Color(0.047058824, 0.03529412, 0.03529412, 1)])
 
 [node name="Controller" type="Node2D" parent="." unique_id=4187562]
 script = ExtResource("3_v3fvj")
