@@ -3,7 +3,9 @@
 [ext_resource type="Script" uid="uid://bbmiuafq3nq1w" path="res://Scripts/finish_game.gd" id="1_l3078"]
 [ext_resource type="Texture2D" uid="uid://cj1lr1ow5ksj2" path="res://Assets/buttons/IMG_5624.png" id="3_8lwgr"]
 [ext_resource type="Texture2D" uid="uid://dkffh4ygivjjl" path="res://Assets/blank_faces/01.png" id="3_brglg"]
+[ext_resource type="Texture2D" uid="uid://crewpbu2fac41" path="res://Assets/buttons/IMG_5649.png" id="3_fs30d"]
 [ext_resource type="PackedScene" uid="uid://bdh7najgc4eup" path="res://Scenes/Scene.tscn" id="3_xrq23"]
+[ext_resource type="Texture2D" uid="uid://coy55aiijrdre" path="res://Assets/buttons/IMG_5648.png" id="4_r37rv"]
 [ext_resource type="AudioStream" uid="uid://bdau2iv7r1n6s" path="res://Assets/sound/game final.ogg" id="5_8lwgr"]
 [ext_resource type="Texture2D" uid="uid://bkosboecvqal7" path="res://Assets/IMG_5630.png" id="5_330lq"]
 
@@ -17,70 +19,19 @@ offset_bottom = 40.0
 script = ExtResource("1_l3078")
 track_3 = ExtResource("5_8lwgr")
 
-[node name="Hair1Button" type="Button" parent="Control" unique_id=185456730]
-layout_mode = 0
-offset_left = 1481.0
-offset_top = 215.0
-offset_right = 1541.0
-offset_bottom = 246.0
-text = "HAIR 1"
-
-[node name="Hair2Button" type="Button" parent="Control" unique_id=1518693026]
-layout_mode = 0
-offset_left = 1548.0
-offset_top = 215.0
-offset_right = 1608.0
-offset_bottom = 246.0
-text = "HAIR 2"
-
-[node name="Hair3Button" type="Button" parent="Control" unique_id=1608627268]
-layout_mode = 0
-offset_left = 1615.0
-offset_top = 215.0
-offset_right = 1675.0
-offset_bottom = 246.0
-text = "HAIR 3
-"
-
-[node name="Hair4Button" type="Button" parent="Control" unique_id=686968751]
-layout_mode = 0
-offset_left = 1481.0
-offset_top = 251.0
-offset_right = 1541.0
-offset_bottom = 282.0
-text = "HAIR 4
-"
-
-[node name="Hair5Button" type="Button" parent="Control" unique_id=1378166672]
-layout_mode = 0
-offset_left = 1548.0
-offset_top = 251.0
-offset_right = 1608.0
-offset_bottom = 282.0
-text = "HAIR 5
-"
-
-[node name="Hair6Button" type="Button" parent="Control" unique_id=1266228935]
-layout_mode = 0
-offset_left = 1614.0
-offset_top = 251.0
-offset_right = 1674.0
-offset_bottom = 282.0
-text = "HAIR 6
-"
-
-[node name="FinishButton" type="Button" parent="Control" unique_id=1144660717]
-custom_minimum_size = Vector2(200, 50)
-layout_mode = 0
-offset_left = 1614.0
-offset_top = 946.0
-offset_right = 1814.0
-offset_bottom = 996.0
-text = "Finish"
-
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Control" unique_id=817772083]
 volume_db = -4.09
 autoplay = true
+
+[node name="FinishButton" type="TextureButton" parent="Control" unique_id=770893075]
+layout_mode = 0
+offset_left = 1494.0
+offset_top = 891.0
+offset_right = 2279.0
+offset_bottom = 1294.0
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("3_fs30d")
+texture_pressed = ExtResource("4_r37rv")
 
 [node name="HairButton" type="TextureButton" parent="Control" unique_id=1931004473]
 layout_mode = 0

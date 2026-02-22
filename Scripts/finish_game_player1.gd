@@ -8,7 +8,7 @@ func _ready():
 		old_player.queue_free()
 	$AudioStreamPlayer2D.stream = track_3
 	$AudioStreamPlayer2D.play()
-	$HBoxContainer/FinishButton.pressed.connect(_on_finish_pressed)
+	$FinishButton.pressed.connect(_on_finish_pressed)
 	var resource = load("res://Assets/main_dialogue.dialogue")
 	DialogueManager.show_dialogue_balloon(resource, "bathroom")
 
