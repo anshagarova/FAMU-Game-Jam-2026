@@ -3,6 +3,7 @@ extends Control
 func _ready():
 	$PlayAsPlayer1.pressed.connect(_on_play1_pressed)
 	$PlayAsPlayer2.pressed.connect(_on_play2_pressed)
+	$Menu.mouse_filter = Control.MOUSE_FILTER_IGNORE
 
 func _on_play1_pressed():
 	var scene_path = "res://Scenes/Play_as_player1.tscn"
