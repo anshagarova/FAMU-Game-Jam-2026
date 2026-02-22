@@ -2,10 +2,23 @@
 
 [ext_resource type="Script" uid="uid://x0irgr666fky" path="res://Scripts/menu.gd" id="1_wroy6"]
 [ext_resource type="Texture2D" uid="uid://bhf2e4mp8wlrf" path="res://Assets/buttons/IMG_5639.png" id="2_65laq"]
-[ext_resource type="VideoStream" path="res://Assets/dum_a_dest.ogv" id="2_emfgf"]
+[ext_resource type="VideoStream" uid="uid://dp8grnapu8n0u" path="res://Assets/dum_a_dest.ogv" id="2_emfgf"]
 [ext_resource type="Texture2D" uid="uid://bn2lrxg4qnmkp" path="res://Assets/buttons/IMG_5638.png" id="3_raohk"]
 [ext_resource type="Texture2D" uid="uid://bv5hbqmin61qs" path="res://Assets/buttons/IMG_5637.png" id="4_f6i3p"]
 [ext_resource type="Texture2D" uid="uid://741onmuvg0il" path="res://Assets/buttons/IMG_5636.png" id="6_f6i3p"]
+[ext_resource type="Texture2D" uid="uid://t5o2mfsocwkv" path="res://Assets/level_select.png" id="7_ve7s0"]
+[ext_resource type="Texture2D" uid="uid://bslvhh6vrqham" path="res://Assets/buttons/01.png" id="8_xoe8g"]
+[ext_resource type="Texture2D" uid="uid://cljcdamvm03fe" path="res://Assets/buttons/01_pressed.png" id="9_o5eci"]
+[ext_resource type="Texture2D" uid="uid://dkm8bsv3xliog" path="res://Assets/buttons/02.png" id="10_bnl8o"]
+[ext_resource type="Texture2D" uid="uid://bkidydi3o6t4e" path="res://Assets/buttons/02_pressed.png" id="11_p6elb"]
+[ext_resource type="Texture2D" uid="uid://c1vps5cn2dg77" path="res://Assets/buttons/03.png" id="12_dbwyr"]
+[ext_resource type="Texture2D" uid="uid://cox2v23wbweex" path="res://Assets/buttons/03_pressed.png" id="13_kdy6k"]
+[ext_resource type="Texture2D" uid="uid://bnsku1o8loban" path="res://Assets/buttons/04.png" id="14_buusc"]
+[ext_resource type="Texture2D" uid="uid://bakvuwkajiw36" path="res://Assets/buttons/04_pressed.png" id="15_n77uk"]
+[ext_resource type="Texture2D" uid="uid://8be75p0880vw" path="res://Assets/buttons/05.png" id="16_tltk5"]
+[ext_resource type="Texture2D" uid="uid://y1sxqb4sb175" path="res://Assets/buttons/05_pressed.png" id="17_et026"]
+[ext_resource type="Texture2D" uid="uid://ddxgq7eryj15y" path="res://Assets/buttons/06.png" id="18_ajn42"]
+[ext_resource type="Texture2D" uid="uid://dsn7uc3fkbvb6" path="res://Assets/buttons/06_pressed.png" id="19_lykcg"]
 
 [node name="Control" type="Control" unique_id=751186852]
 layout_mode = 3
@@ -61,6 +74,60 @@ offset_right = 1918.0
 offset_bottom = 1082.0
 texture = ExtResource("6_f6i3p")
 expand_mode = 2
+
+[node name="LevelSelect" type="Sprite2D" parent="." unique_id=1579540160]
+visible = false
+position = Vector2(960, 540)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_ve7s0")
+
+[node name="Button01" type="TextureButton" parent="LevelSelect" unique_id=640071820]
+offset_left = -1748.0
+offset_top = -432.0
+offset_right = -1310.0
+offset_bottom = -15.0
+texture_normal = ExtResource("8_xoe8g")
+texture_pressed = ExtResource("9_o5eci")
+
+[node name="Button02" type="TextureButton" parent="LevelSelect" unique_id=727122082]
+offset_left = -1230.0
+offset_top = -418.0
+offset_right = -792.0
+offset_bottom = -1.0
+texture_normal = ExtResource("10_bnl8o")
+texture_pressed = ExtResource("11_p6elb")
+
+[node name="Button03" type="TextureButton" parent="LevelSelect" unique_id=1236575436]
+offset_left = -746.0
+offset_top = -394.0
+offset_right = -308.0
+offset_bottom = 23.0
+texture_normal = ExtResource("12_dbwyr")
+texture_pressed = ExtResource("13_kdy6k")
+
+[node name="Button04" type="TextureButton" parent="LevelSelect" unique_id=615833694]
+offset_left = -228.0
+offset_top = -404.0
+offset_right = 210.0
+offset_bottom = 13.0
+texture_normal = ExtResource("14_buusc")
+texture_pressed = ExtResource("15_n77uk")
+
+[node name="Button05" type="TextureButton" parent="LevelSelect" unique_id=1517894032]
+offset_left = 292.0
+offset_top = -350.0
+offset_right = 730.0
+offset_bottom = 67.0
+texture_normal = ExtResource("16_tltk5")
+texture_pressed = ExtResource("17_et026")
+
+[node name="Button06" type="TextureButton" parent="LevelSelect" unique_id=652358801]
+offset_left = 814.0
+offset_top = -380.0
+offset_right = 1252.0
+offset_bottom = 37.0
+texture_normal = ExtResource("18_ajn42")
+texture_pressed = ExtResource("19_lykcg")
 
 [connection signal="pressed" from="PlayAsPlayer1" to="." method="_on_play_as_player_1_pressed"]
 [connection signal="pressed" from="PlayAsPlayer2" to="." method="_on_play_as_player_2_pressed"]
