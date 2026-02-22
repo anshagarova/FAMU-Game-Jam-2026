@@ -7,11 +7,14 @@ func _on_file_selected(path) -> void:
 	Global.final_image.save_png(path)
 	
 func _on_save_pressed() -> void:
-	var file_dialog = $FileDialog
-	file_dialog.mode = FileDialog.FILE_MODE_SAVE_FILE
-	file_dialog.filters = ["*.png"]
-	file_dialog.connect("file_selected", Callable(self, "_on_file_selected"))
-	file_dialog.popup_centered_ratio()
+	if OS.has_feature("web"):
+		JavaScriptBridge.download_buffer(Global.final_image.save_png_to_buffer(), "vampire.png")
+	else:
+		var file_dialog = $FileDialog
+		file_dialog.mode = FileDialog.FILE_MODE_SAVE_FILE
+		file_dialog.filters = ["*.png"]
+		file_dialog.connect("file_selected", Callable(self, "_on_file_selected"))
+		file_dialog.popup_centered_ratio()
 
 func _ready() -> void:
 	$PercentageDisplay.anchor_left = 0.0
