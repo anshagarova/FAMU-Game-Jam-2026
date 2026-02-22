@@ -5,6 +5,8 @@
 [ext_resource type="AudioStream" uid="uid://c2oxguph3eg1r" path="res://Assets/sound/ending final final.mp3" id="3_6hv0t"]
 [ext_resource type="Script" uid="uid://ct31or785u0ga" path="res://Scripts/spriteSwitcher.gd" id="3_k26qm"]
 [ext_resource type="VideoStream" uid="uid://ecsaaluwkj8e" path="res://Assets/club_bg.ogv" id="4_7kaa4"]
+[ext_resource type="Texture2D" uid="uid://cvbdmn4v1o0xn" path="res://Assets/id_card.png" id="6_8hhym"]
+[ext_resource type="Texture2D" uid="uid://5t863x6jf6t1" path="res://Assets/polaroid.png" id="7_g7dt5"]
 
 [node name="Node2D" type="Node2D" unique_id=1308360712]
 script = ExtResource("1_ebg4k")
@@ -53,3 +55,15 @@ mouse_behavior_recursive = 1
 stream = ExtResource("4_7kaa4")
 autoplay = true
 loop = true
+
+[node name="IdCard" type="Sprite2D" parent="." unique_id=270730791]
+z_index = -2
+position = Vector2(960, 540)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_8hhym")
+
+[node name="Polaroid" type="Sprite2D" parent="." unique_id=928979779]
+z_index = -3
+position = Vector2(960, 540)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_g7dt5")
