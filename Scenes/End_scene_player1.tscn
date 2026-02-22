@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cmvd8h41iduhm"]
+
+[ext_resource type="Script" uid="uid://cw4yesut1asqn" path="res://Scripts/end_scene_player_1.gd" id="1_swki5"]
+[ext_resource type="AudioStream" uid="uid://c2oxguph3eg1r" path="res://Assets/sound/ending final final.mp3" id="3_tccc4"]
+[ext_resource type="VideoStream" uid="uid://ecsaaluwkj8e" path="res://Assets/club_bg.ogv" id="4_mues3"]
+
+[node name="Node2D" type="Node2D" unique_id=1308360712]
+script = ExtResource("1_swki5")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=880936289]
+stream = ExtResource("3_tccc4")
+autoplay = true
+parameters/looping = true
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=504089707]
+z_index = -5
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+mouse_behavior_recursive = 1
+stream = ExtResource("4_mues3")
+autoplay = true
+loop = true
