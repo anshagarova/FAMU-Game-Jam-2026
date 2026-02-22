@@ -1,9 +1,9 @@
 extends Control
 
 func _ready():
-	$VBoxContainer/PreciseBrush.pressed.connect(_on_ThinBrushButton_pressed)
-	$VBoxContainer/SoftBrush.pressed.connect(_on_ThickBrushButton_pressed)
-	$VBoxContainer/MediumBrush.pressed.connect(_on_MediumBrushButton_pressed)
+	$PreciseBrush.pressed.connect(_on_ThinBrushButton_pressed)
+	$SoftBrush.pressed.connect(_on_ThickBrushButton_pressed)
+	$MediumBrush.pressed.connect(_on_MediumBrushButton_pressed)
 
 func _on_ThinBrushButton_pressed():
 	ActiveBrush.current_brush_style = "thin"

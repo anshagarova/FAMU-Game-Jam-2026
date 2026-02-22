@@ -2,12 +2,15 @@
 
 [ext_resource type="Script" uid="uid://btyxwt27wje37" path="res://Scripts/brush_switcher.gd" id="1_1o454"]
 [ext_resource type="Script" uid="uid://c41lmpi2r4qhm" path="res://Scripts/pallet.gd" id="2_o8g73"]
+[ext_resource type="Texture2D" uid="uid://dqfw8diigjjr4" path="res://Assets/buttons/IMG_5627.png" id="2_tn73o"]
 [ext_resource type="Script" uid="uid://bfb6vl55ojujh" path="res://Scripts/makeup_brush_liner.gd" id="2_v3fvj"]
+[ext_resource type="Texture2D" uid="uid://bvhjoupwuwvly" path="res://Assets/buttons/IMG_5626.png" id="3_347al"]
 [ext_resource type="Script" uid="uid://b7mnjofsqo2rw" path="res://Scripts/makeup_brush_soft.gd" id="3_qswnl"]
 [ext_resource type="Script" uid="uid://bx83igllljdg" path="res://Scripts/controller.gd" id="3_v3fvj"]
 [ext_resource type="Script" uid="uid://bkeswuixc4f" path="res://Scripts/makeup_brush_lipstick.gd" id="4_qswnl"]
+[ext_resource type="Texture2D" uid="uid://qut7rdxy8h8c" path="res://Assets/buttons/IMG_5625.png" id="4_xxbjm"]
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_qswnl"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_v5su0"]
 light_mode = 1
 
 [node name="Node2D" type="Node2D" unique_id=1749975836]
@@ -19,27 +22,33 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_1o454")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control2" unique_id=1872528751]
+[node name="PreciseBrush" type="TextureButton" parent="Control2" unique_id=1916462204]
 layout_mode = 0
-offset_left = 161.0
-offset_top = 230.0
-offset_right = 640.0
-offset_bottom = 296.0
+offset_left = 401.0
+offset_top = 270.0
+offset_right = 469.0
+offset_bottom = 467.0
+texture_normal = ExtResource("2_tn73o")
 
-[node name="PreciseBrush" type="Button" parent="Control2/VBoxContainer" unique_id=818478664]
-layout_mode = 2
-text = "Thin Brush"
+[node name="MediumBrush" type="TextureButton" parent="Control2" unique_id=201602998]
+layout_mode = 0
+offset_left = 360.0
+offset_top = 311.0
+offset_right = 406.0
+offset_bottom = 473.0
+texture_normal = ExtResource("3_347al")
 
-[node name="SoftBrush" type="Button" parent="Control2/VBoxContainer" unique_id=1142222656]
-layout_mode = 2
-text = "Soft Brush"
-
-[node name="MediumBrush" type="Button" parent="Control2/VBoxContainer" unique_id=1171567249]
-layout_mode = 2
-text = "Medium Brush"
+[node name="SoftBrush" type="TextureButton" parent="Control2" unique_id=881093241]
+layout_mode = 0
+offset_left = 200.96365
+offset_top = 296.11804
+offset_right = 331.96365
+offset_bottom = 513.38275
+rotation = -0.2355473
+texture_normal = ExtResource("4_xxbjm")
 
 [node name="ThinBrush" type="Node2D" parent="." unique_id=1683283584 node_paths=PackedStringArray("palette")]
-material = SubResource("CanvasItemMaterial_qswnl")
+material = SubResource("CanvasItemMaterial_v5su0")
 script = ExtResource("2_v3fvj")
 min_width = 0.0
 palette = NodePath("../Pallet")
