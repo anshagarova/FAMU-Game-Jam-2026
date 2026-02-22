@@ -25,7 +25,15 @@ func _on_hair_six_pressed():
 	hair_sprite.texture = load("res://Assets/hair/06.png")
 
 
+func _on_dialogue_ended(flags):
+	self.visible = true
+	var paintingScene = %paintingScene
+	paintingScene.visible = true
+
 func _ready():
+	self.visible = false
+	var paintingScene = %paintingScene
+	paintingScene.visible = false
 	$HBoxContainer/FinishButton.pressed.connect(_on_finish_pressed)
 	$Hair1Button.pressed.connect(_on_hair_one_pressed)
 	$Hair2Button.pressed.connect(_on_hair_two_pressed)
@@ -33,6 +41,9 @@ func _ready():
 	$Hair4Button.pressed.connect(_on_hair_four_pressed)
 	$Hair5Button.pressed.connect(_on_hair_five_pressed)
 	$Hair6Button.pressed.connect(_on_hair_six_pressed)
+	var resource = load("res://Assets/main_dialogue.dialogue")
+	DialogueManager.show_dialogue_balloon(resource, "bathroom")
+	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
 
 func _on_finish_pressed():
 	var brush = %paintingScene/ThinBrush

@@ -9,6 +9,7 @@ func _on_dialogue_ended(flags):
 	
 
 func _on_play_button_pressed():
+	$VBoxContainer/PlayButton.visible = false
 	var resource = load("res://Assets/main_dialogue.dialogue")
 	DialogueManager.show_dialogue_balloon(resource, "start")
 	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)

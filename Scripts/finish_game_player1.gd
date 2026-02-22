@@ -2,6 +2,8 @@ extends Control
 
 func _ready():
 	$HBoxContainer/FinishButton.pressed.connect(_on_finish_pressed)
+	var resource = load("res://Assets/main_dialogue.dialogue")
+	DialogueManager.show_dialogue_balloon(resource, "bathroom")
 
 func _on_finish_pressed():
 	var scene_path = "res://Scenes/End_scene.tscn"

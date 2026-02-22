@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c57eepp7kndgq"]
 
-[ext_resource type="Script" path="res://Scripts/finish_game_player1.gd" id="1_yknbp"]
+[ext_resource type="Script" uid="uid://b8s6t4gj7rl43" path="res://Scripts/finish_game_player1.gd" id="1_yknbp"]
 [ext_resource type="Texture2D" uid="uid://dvu6jmlnh0dab" path="res://Assets/with_makeup/01.png" id="2_yknbp"]
 [ext_resource type="Texture2D" uid="uid://dx74v4mobgwsr" path="res://Assets/bathroom_bg.png" id="3_5dhm0"]
 [ext_resource type="AudioStream" uid="uid://bdau2iv7r1n6s" path="res://Assets/sound/game final.ogg" id="4_e2gmq"]
