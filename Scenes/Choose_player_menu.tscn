@@ -1,31 +1,46 @@
 [gd_scene format=3 uid="uid://bwjgwkn7ld6n2"]
 
 [ext_resource type="Script" uid="uid://x0irgr666fky" path="res://Scripts/menu.gd" id="1_wroy6"]
+[ext_resource type="Texture2D" uid="uid://bhf2e4mp8wlrf" path="res://Assets/buttons/IMG_5639.png" id="2_65laq"]
 [ext_resource type="VideoStream" path="res://Assets/dum_a_dest.ogv" id="2_emfgf"]
+[ext_resource type="Texture2D" uid="uid://bn2lrxg4qnmkp" path="res://Assets/buttons/IMG_5638.png" id="3_raohk"]
 [ext_resource type="Texture2D" uid="uid://bciqkggdvief4" path="res://Assets/IMG_5635.jpg" id="4_65laq"]
+[ext_resource type="Texture2D" uid="uid://bv5hbqmin61qs" path="res://Assets/buttons/IMG_5637.png" id="4_f6i3p"]
 
 [node name="Control" type="Control" unique_id=751186852]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_wroy6")
 
-[node name="PlayAsPlayer1" type="Button" parent="." unique_id=590934932]
-custom_minimum_size = Vector2(200, 0)
+[node name="PlayAsPlayer1" type="TextureButton" parent="." unique_id=1626757485]
+z_index = 1
 layout_mode = 0
-offset_left = 1277.0
-offset_top = 321.0
-offset_right = 1833.0
-offset_bottom = 478.0
-text = "Play as a friend"
+offset_left = 1238.0
+offset_top = 286.0
+offset_right = 2482.0
+offset_bottom = 741.0
+scale = Vector2(0.5, 0.5)
+texture_pressed = ExtResource("2_65laq")
 
-[node name="PlayAsPlayer2" type="Button" parent="." unique_id=1917124320]
-custom_minimum_size = Vector2(200, 50)
+[node name="PlayAsPlayer2" type="TextureButton" parent="." unique_id=1001473898]
+z_index = 1
 layout_mode = 0
-offset_left = 1283.0
-offset_top = 536.0
-offset_right = 1831.0
-offset_bottom = 687.0
-text = "Play as a vampire"
+offset_left = 1249.0
+offset_top = 515.0
+offset_right = 2450.0
+offset_bottom = 943.0
+scale = Vector2(0.5, 0.5)
+texture_pressed = ExtResource("3_raohk")
+
+[node name="Quit" type="TextureButton" parent="." unique_id=141185946]
+z_index = 1
+layout_mode = 0
+offset_left = 1556.0
+offset_top = 802.0
+offset_right = 2192.0
+offset_bottom = 1220.0
+scale = Vector2(0.5, 0.5)
+texture_pressed = ExtResource("4_f6i3p")
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=812053211]
 z_index = -1

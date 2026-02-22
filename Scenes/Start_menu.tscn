@@ -3,8 +3,10 @@
 [ext_resource type="Script" uid="uid://b5raugq6p6e8y" path="res://Scripts/start_menu.gd" id="1_6remo"]
 [ext_resource type="Texture2D" uid="uid://cli03in4nqmhw" path="res://Assets/menu_bg.jpg" id="2_vset1"]
 [ext_resource type="VideoStream" path="res://Assets/dum_a_dest.ogv" id="3_u88ce"]
+[ext_resource type="Texture2D" uid="uid://klqegiuxjotq" path="res://Assets/buttons/IMG_5641.png" id="4_5hugr"]
 [ext_resource type="AudioStream" uid="uid://cc8gfxtt6w0tk" path="res://Assets/sound/wind-ambience-on-stormy-night-vincentmets-1-02-25.ogg" id="4_t7rl6"]
 [ext_resource type="AudioStream" uid="uid://ckir1ur7f0xam" path="res://Assets/sound/horror-strings-tense-rising-brukowskij-long-2-00-30.ogg" id="5_1wmxr"]
+[ext_resource type="Texture2D" uid="uid://dywjstbps1cxf" path="res://Assets/buttons/IMG_5642.png" id="5_uyqt2"]
 [ext_resource type="Texture2D" uid="uid://3ikhjxscimqj" path="res://Assets/IMG_1149.png" id="6_7k6f1"]
 
 [node name="Control" type="Control" unique_id=2065581739]
@@ -18,19 +20,15 @@ script = ExtResource("1_6remo")
 track_1 = ExtResource("4_t7rl6")
 track_2 = ExtResource("5_1wmxr")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2030037802]
-custom_minimum_size = Vector2(200, 50)
+[node name="PlayButton" type="TextureButton" parent="." unique_id=167041089]
 layout_mode = 0
-offset_left = 860.0
-offset_top = 460.0
-offset_right = 1060.0
-offset_bottom = 591.0
-alignment = 1
-
-[node name="PlayButton" type="Button" parent="VBoxContainer" unique_id=1879607646]
-custom_minimum_size = Vector2(200, 50)
-layout_mode = 2
-text = "Play"
+offset_left = 728.6
+offset_top = 602.0
+offset_right = 1929.6
+offset_bottom = 1030.0
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("4_5hugr")
+texture_pressed = ExtResource("5_uyqt2")
 
 [node name="MenuBg" type="Sprite2D" parent="." unique_id=369857806]
 visible = false
@@ -54,6 +52,7 @@ loop = true
 autoplay = true
 
 [node name="Picture" type="TextureRect" parent="." unique_id=1854001599]
+visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0

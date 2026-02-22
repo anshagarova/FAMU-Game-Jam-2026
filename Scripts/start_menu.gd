@@ -7,7 +7,7 @@ extends Control
 @export var track_2: AudioStream
 
 func _ready():
-	$VBoxContainer/PlayButton.pressed.connect(_on_play_button_pressed)
+	$PlayButton.pressed.connect(_on_play_button_pressed)
 
 	if music_player.get_parent() != get_tree().root:
 		music_player.get_parent().remove_child(music_player)
@@ -30,7 +30,7 @@ func _on_play_button_pressed():
 		music_player.stream = track_2
 		music_player.play()
 	
-	$VBoxContainer/PlayButton.visible = false
+	$PlayButton.visible = false
 	
 	var resource = load("res://Assets/main_dialogue.dialogue")
 	
