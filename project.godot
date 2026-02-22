@@ -13,7 +13,7 @@ config_version=5
 config/name="FAMU Jam"
 run/main_scene="uid://rm5lmfbccnxx"
 config/features=PackedStringArray("4.6", "Mobile")
-config/icon="res://icon.svg"
+config/icon="uid://dnd0hc1uvwinj"
 
 [autoload]
 

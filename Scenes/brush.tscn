@@ -1,9 +1,0 @@
-[gd_scene format=3 uid="uid://n7vlos6okwbn"]
-
-[ext_resource type="Texture2D" uid="uid://bf57ca5mf6y57" path="res://Assets/makeup-brush-png-2.png" id="1_3w62d"]
-
-[node name="Brush" type="Node2D" unique_id=1564295105]
-scale = Vector2(0.2, 0.2)
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=219153460]
-texture = ExtResource("1_3w62d")
