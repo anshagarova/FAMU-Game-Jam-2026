@@ -14,6 +14,7 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_l3078")
+track_3 = ExtResource("5_8lwgr")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Control" unique_id=950133625]
 custom_minimum_size = Vector2(200, 50)
@@ -80,6 +81,10 @@ offset_bottom = 282.0
 text = "HAIR 6
 "
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Control" unique_id=817772083]
+volume_db = -4.09
+autoplay = true
+
 [node name="paintingScene" parent="." unique_id=1749975836 instance=ExtResource("3_xrq23")]
 unique_name_in_owner = true
 
@@ -102,9 +107,3 @@ z_index = -5
 position = Vector2(960, 540)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("5_330lq")
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=817772083]
-stream = ExtResource("5_8lwgr")
-volume_db = -4.09
-autoplay = true
-parameters/looping = true

@@ -1,5 +1,7 @@
 extends Control
 
+@export var track_3: AudioStream
+
 func _on_hair_one_pressed():
 	var hair_sprite = %Hair
 	hair_sprite.texture = load("res://Assets/hair/01.png")
@@ -30,10 +32,11 @@ func _on_dialogue_ended(flags):
 	paintingScene.visible = true
 
 func _ready():
-	var root = get_tree().root
-	for child in root.get_children():
-		if child is AudioStreamPlayer:
-			child.queue_free()
+	var old_player = get_tree().root.get_node_or_null("CarriedMusicPlayer")
+	if old_player:
+		old_player.queue_free()
+	$AudioStreamPlayer2D.stream = track_3
+	$AudioStreamPlayer2D.play()
 	self.visible = false
 	var paintingScene = %paintingScene
 	paintingScene.visible = false

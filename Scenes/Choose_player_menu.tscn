@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://x0irgr666fky" path="res://Scripts/menu.gd" id="1_wroy6"]
 [ext_resource type="VideoStream" path="res://Assets/dum_a_dest.ogv" id="2_emfgf"]
-[ext_resource type="AudioStream" uid="uid://ckir1ur7f0xam" path="res://Assets/sound/horror-strings-tense-rising-brukowskij-long-2-00-30.ogg" id="3_07471"]
 [ext_resource type="Texture2D" uid="uid://bciqkggdvief4" path="res://Assets/IMG_5635.jpg" id="4_65laq"]
 
 [node name="Control" type="Control" unique_id=751186852]
@@ -40,9 +39,6 @@ autoplay = true
 loop = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=201050195]
-stream = ExtResource("3_07471")
-autoplay = true
-parameters/looping = true
 
 [node name="Menu" type="TextureRect" parent="." unique_id=390448397]
 layout_mode = 0
