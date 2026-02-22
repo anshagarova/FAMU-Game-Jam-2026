@@ -22,9 +22,20 @@ func _start_music():
 	if music_player.stream != track_1:
 		music_player.stream = track_1
 		music_player.play()
+		
+func _on_playback_finished():
+	var video_player = $VideoStreamPlayer
+	video_player.stream = load("res://Assets/upir_v_rakvi_loop.ogv")
+	video_player.loop = true
+	video_player.play()
+	
 
 func _on_play_button_pressed():
-	picture.show()
+	var video_player = $VideoStreamPlayer
+	video_player.loop = false
+	video_player.stream = load("res://Assets/upir_v_rakvi_pohyb.ogv")
+	video_player.finished.connect(_on_playback_finished)
+	video_player.play()
 	
 	if music_player.stream != track_2:
 		music_player.stream = track_2

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b5raugq6p6e8y" path="res://Scripts/start_menu.gd" id="1_6remo"]
 [ext_resource type="Texture2D" uid="uid://cli03in4nqmhw" path="res://Assets/menu_bg.jpg" id="2_vset1"]
-[ext_resource type="VideoStream" path="res://Assets/dum_a_dest.ogv" id="3_u88ce"]
+[ext_resource type="VideoStream" uid="uid://dp8grnapu8n0u" path="res://Assets/dum_a_dest.ogv" id="3_u88ce"]
 [ext_resource type="Texture2D" uid="uid://klqegiuxjotq" path="res://Assets/buttons/IMG_5641.png" id="4_5hugr"]
 [ext_resource type="AudioStream" uid="uid://cc8gfxtt6w0tk" path="res://Assets/sound/wind-ambience-on-stormy-night-vincentmets-1-02-25.ogg" id="4_t7rl6"]
 [ext_resource type="AudioStream" uid="uid://ckir1ur7f0xam" path="res://Assets/sound/horror-strings-tense-rising-brukowskij-long-2-00-30.ogg" id="5_1wmxr"]
