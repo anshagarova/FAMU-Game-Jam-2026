@@ -2,6 +2,17 @@ extends Control
 
 @export var track_3: AudioStream
 
+var hair_textures = [
+	preload("res://Assets/hair/01.png"),
+	preload("res://Assets/hair/02.png"),
+	preload("res://Assets/hair/03.png"),
+	preload("res://Assets/hair/04.png"),
+	preload("res://Assets/hair/05.png"),
+	preload("res://Assets/hair/06.png"),
+]
+var current_hair = 0
+var hair_count = 6
+
 func _on_hair_one_pressed():
 	var hair_sprite = %Hair
 	hair_sprite.texture = load("res://Assets/hair/01.png")
@@ -40,16 +51,17 @@ func _ready():
 	self.visible = false
 	var paintingScene = %paintingScene
 	paintingScene.visible = false
-	$HBoxContainer/FinishButton.pressed.connect(_on_finish_pressed)
-	$Hair1Button.pressed.connect(_on_hair_one_pressed)
-	$Hair2Button.pressed.connect(_on_hair_two_pressed)
-	$Hair3Button.pressed.connect(_on_hair_three_pressed)
-	$Hair4Button.pressed.connect(_on_hair_four_pressed)
-	$Hair5Button.pressed.connect(_on_hair_five_pressed)
-	$Hair6Button.pressed.connect(_on_hair_six_pressed)
+	$FinishButton.pressed.connect(_on_finish_pressed)
+	$HairButton.pressed.connect(_on_hair_pressed)
 	var resource = load("res://Assets/main_dialogue.dialogue")
 	DialogueManager.show_dialogue_balloon(resource, "bathroom")
 	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
+
+func _on_hair_pressed():
+	var hair_sprite = %Hair
+	hair_sprite.texture = hair_textures[current_hair]
+	current_hair = (current_hair + 1) % hair_textures.size()
+
 
 func _on_finish_pressed():
 	var brush = %paintingScene/ThinBrush

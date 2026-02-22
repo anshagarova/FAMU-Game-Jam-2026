@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://utcn34f7xnik"]
 
 [ext_resource type="Script" uid="uid://bbmiuafq3nq1w" path="res://Scripts/finish_game.gd" id="1_l3078"]
+[ext_resource type="Texture2D" uid="uid://cj1lr1ow5ksj2" path="res://Assets/buttons/IMG_5624.png" id="3_8lwgr"]
 [ext_resource type="Texture2D" uid="uid://dkffh4ygivjjl" path="res://Assets/blank_faces/01.png" id="3_brglg"]
 [ext_resource type="PackedScene" uid="uid://bdh7najgc4eup" path="res://Scenes/Scene.tscn" id="3_xrq23"]
 [ext_resource type="AudioStream" uid="uid://bdau2iv7r1n6s" path="res://Assets/sound/game final.ogg" id="5_8lwgr"]
@@ -15,19 +16,6 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_l3078")
 track_3 = ExtResource("5_8lwgr")
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Control" unique_id=950133625]
-custom_minimum_size = Vector2(200, 50)
-layout_mode = 0
-offset_left = 1614.0
-offset_top = 946.0
-offset_right = 1814.0
-offset_bottom = 996.0
-
-[node name="FinishButton" type="Button" parent="Control/HBoxContainer" unique_id=1144660717]
-custom_minimum_size = Vector2(200, 50)
-layout_mode = 2
-text = "Finish"
 
 [node name="Hair1Button" type="Button" parent="Control" unique_id=185456730]
 layout_mode = 0
@@ -81,9 +69,27 @@ offset_bottom = 282.0
 text = "HAIR 6
 "
 
+[node name="FinishButton" type="Button" parent="Control" unique_id=1144660717]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 0
+offset_left = 1614.0
+offset_top = 946.0
+offset_right = 1814.0
+offset_bottom = 996.0
+text = "Finish"
+
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Control" unique_id=817772083]
 volume_db = -4.09
 autoplay = true
+
+[node name="HairButton" type="TextureButton" parent="Control" unique_id=1931004473]
+layout_mode = 0
+offset_left = 1620.0
+offset_top = 382.0
+offset_right = 1948.0
+offset_bottom = 752.0
+scale = Vector2(0.6, 0.6)
+texture_normal = ExtResource("3_8lwgr")
 
 [node name="paintingScene" parent="." unique_id=1749975836 instance=ExtResource("3_xrq23")]
 unique_name_in_owner = true
