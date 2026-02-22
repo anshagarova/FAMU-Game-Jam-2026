@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://bhf2e4mp8wlrf" path="res://Assets/buttons/IMG_5639.png" id="2_65laq"]
 [ext_resource type="VideoStream" path="res://Assets/dum_a_dest.ogv" id="2_emfgf"]
 [ext_resource type="Texture2D" uid="uid://bn2lrxg4qnmkp" path="res://Assets/buttons/IMG_5638.png" id="3_raohk"]
-[ext_resource type="Texture2D" uid="uid://bciqkggdvief4" path="res://Assets/IMG_5635.jpg" id="4_65laq"]
 [ext_resource type="Texture2D" uid="uid://bv5hbqmin61qs" path="res://Assets/buttons/IMG_5637.png" id="4_f6i3p"]
+[ext_resource type="Texture2D" uid="uid://741onmuvg0il" path="res://Assets/buttons/IMG_5636.png" id="6_f6i3p"]
 
 [node name="Control" type="Control" unique_id=751186852]
 layout_mode = 3
@@ -45,8 +45,8 @@ texture_pressed = ExtResource("4_f6i3p")
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=812053211]
 z_index = -1
 layout_mode = 0
-offset_right = 2048.0
-offset_bottom = 1150.0
+offset_right = 1920.0
+offset_bottom = 1084.0
 mouse_filter = 2
 mouse_behavior_recursive = 1
 stream = ExtResource("2_emfgf")
@@ -59,7 +59,7 @@ loop = true
 layout_mode = 0
 offset_right = 1918.0
 offset_bottom = 1082.0
-texture = ExtResource("4_65laq")
+texture = ExtResource("6_f6i3p")
 expand_mode = 2
 
 [connection signal="pressed" from="PlayAsPlayer1" to="." method="_on_play_as_player_1_pressed"]
