@@ -1,12 +1,10 @@
-extends Node
+extends Sprite2D
 
-var final_image: Image
-var mean: float
-var selectedLevel: int = 3
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	var textureNumber = "0%d" % Global.selectedLevel
+	self.texture = load("res://Assets/with_makeup/%s.png" % textureNumber)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

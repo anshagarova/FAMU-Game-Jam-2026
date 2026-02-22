@@ -47,9 +47,8 @@ unique_name_in_owner = true
 
 [node name="01" type="Sprite2D" parent="." unique_id=1120169525]
 visible = false
-modulate = Color(1, 1, 1, 0.019607844)
 z_index = -2
-position = Vector2(960, 570)
+position = Vector2(960, 520)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_brglg")
 
