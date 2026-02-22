@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://bwjgwkn7ld6n2"]
 
 [ext_resource type="Script" uid="uid://x0irgr666fky" path="res://Scripts/menu.gd" id="1_wroy6"]
-[ext_resource type="VideoStream" uid="uid://dp8grnapu8n0u" path="res://Assets/dum_a_dest.ogv" id="2_emfgf"]
+[ext_resource type="VideoStream" path="res://Assets/dum_a_dest.ogv" id="2_emfgf"]
+[ext_resource type="AudioStream" uid="uid://ckir1ur7f0xam" path="res://Assets/sound/horror-strings-tense-rising-brukowskij-long-2-00-30.ogg" id="3_07471"]
 
 [node name="Control" type="Control" unique_id=751186852]
 layout_mode = 3
@@ -11,36 +12,20 @@ script = ExtResource("1_wroy6")
 [node name="PlayAsPlayer1" type="Button" parent="." unique_id=590934932]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 0
-offset_left = 562.0
-offset_top = 715.0
+offset_left = 513.0
+offset_top = 704.0
 offset_right = 762.0
-offset_bottom = 765.0
+offset_bottom = 771.0
 text = "Play as a friend"
 
 [node name="PlayAsPlayer2" type="Button" parent="." unique_id=1917124320]
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 0
-offset_left = 1167.0
-offset_top = 650.0
-offset_right = 1367.0
-offset_bottom = 700.0
+offset_left = 1153.0
+offset_top = 701.0
+offset_right = 1405.0
+offset_bottom = 765.0
 text = "Play as a vampire"
-
-[node name="VBoxContainer" type="HBoxContainer" parent="." unique_id=1553056176]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = 23.0
-offset_top = 583.0
-offset_right = 1150.0
-offset_bottom = 633.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_constants/separation = 50
-alignment = 1
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=812053211]
 z_index = -1
@@ -52,6 +37,11 @@ mouse_behavior_recursive = 1
 stream = ExtResource("2_emfgf")
 autoplay = true
 loop = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=201050195]
+stream = ExtResource("3_07471")
+autoplay = true
+parameters/looping = true
 
 [connection signal="pressed" from="PlayAsPlayer1" to="." method="_on_play_as_player_1_pressed"]
 [connection signal="pressed" from="PlayAsPlayer2" to="." method="_on_play_as_player_2_pressed"]

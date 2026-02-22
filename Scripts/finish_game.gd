@@ -24,13 +24,16 @@ func _on_hair_six_pressed():
 	var hair_sprite = %Hair
 	hair_sprite.texture = load("res://Assets/hair/06.png")
 
-
 func _on_dialogue_ended(flags):
 	self.visible = true
 	var paintingScene = %paintingScene
 	paintingScene.visible = true
 
 func _ready():
+	var root = get_tree().root
+	for child in root.get_children():
+		if child is AudioStreamPlayer:
+			child.queue_free()
 	self.visible = false
 	var paintingScene = %paintingScene
 	paintingScene.visible = false
