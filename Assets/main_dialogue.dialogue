@@ -8,17 +8,16 @@ Vamp: I don’t think I can make it!
 BFF: Nah I gotchu. Go to the bathroom and keep me on the line, we’ll do it long distance style…
 => END
 ~ bathroom
-Vamp: …
 BFF: r u in the bathroom?
 Vamp: yeah, but-
 BFF: good! Do u have ur make up stuff there?
-Vamp: yeah, it’s a mess in here, the shelves are really cluttered
+Vamp: yeah, everything is on the shelves here, even my wigs
 BFF: yesss! Ive got a vision for u boo, it’s gonna be da BOMB!
-Vamp: but… I can’t see myself in the mirror… I use sticky notes on my mirror to know where my face is.
-BFF: yah I know. no worries, I know ur house like the back of my hand. just trust me
-BFF: see where the towel is in the reflection?? Ur left cheek is slightly below it
-Vamp: you mean my right cheek.
-BFF: yah, my left is ur right, doesn’t matter. just find ur blush and apply it
+Vamp: but… I can’t see myself in the mirror…
+BFF: yah I know. no worries, I’ll tell you where to apply everything. just trust me
+BFF: first take your hairbrush and select the correct wig. I’ll tell u which one. It will frame ur face.
+BFF: after u have ur wig on, u can basically guess where all ur features are. like, ur nose is in the middle of the mirror
+BFF: next, we need to apply the MAKE UP!!!! Now listen…
 => END
 ~ end_p1
 BFF: omg hey
@@ -26,4 +25,10 @@ Vamp: Hii
 BFF: well, u look… experimental. Its crazy good tho
 Bouncer: ID, please.
 HINT: To see if the finished look matches your vision, let the other player show you their screen or send you a picture.
+=> END
+~ end_p2
+BFF: omg hey
+Vamp: Hii
+BFF: well, u look… experimental. Its crazy good tho
+Bouncer: ID, please.
 => END

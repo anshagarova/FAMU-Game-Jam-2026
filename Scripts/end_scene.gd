@@ -17,6 +17,9 @@ func _on_save_pressed() -> void:
 		file_dialog.popup_centered_ratio()
 
 func _ready() -> void:
+	var resource = load("res://Assets/main_dialogue.dialogue")
+	DialogueManager.show_dialogue_balloon(resource, "end_p2")
+	
 	$PercentageDisplay.anchor_left = 0.0
 	$PercentageDisplay.anchor_right = 1.0
 	$PercentageDisplay.anchor_top = 0.0
