@@ -37,8 +37,8 @@ texture = ExtResource("2_vset1")
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=2127656543]
 z_index = -1
 layout_mode = 0
-offset_right = 2048.0
-offset_bottom = 1150.0
+offset_right = 1920.0
+offset_bottom = 1078.0
 mouse_filter = 2
 mouse_behavior_recursive = 1
 stream = ExtResource("3_u88ce")
