@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://di1kdgjgrp32k"]
 
 [ext_resource type="Script" uid="uid://c05uxsihrx1in" path="res://Scripts/end_scene.gd" id="1_ebg4k"]
+[ext_resource type="Texture2D" uid="uid://ctuusrp7ylp81" path="res://Assets/buttons/IMG_5671.png" id="2_6ur52"]
 [ext_resource type="Texture2D" uid="uid://dvu6jmlnh0dab" path="res://Assets/with_makeup/01.png" id="2_nmk6v"]
 [ext_resource type="AudioStream" uid="uid://c2oxguph3eg1r" path="res://Assets/sound/ending final final.mp3" id="3_6hv0t"]
 [ext_resource type="Script" uid="uid://ct31or785u0ga" path="res://Scripts/spriteSwitcher.gd" id="3_k26qm"]
+[ext_resource type="Texture2D" uid="uid://cay6268jj4evt" path="res://Assets/buttons/IMG_5670.png" id="3_xrdy5"]
 [ext_resource type="VideoStream" uid="uid://ecsaaluwkj8e" path="res://Assets/club_bg.ogv" id="4_7kaa4"]
 [ext_resource type="Texture2D" uid="uid://cvbdmn4v1o0xn" path="res://Assets/id_card.png" id="6_8hhym"]
 [ext_resource type="Texture2D" uid="uid://5t863x6jf6t1" path="res://Assets/polaroid.png" id="7_g7dt5"]
@@ -19,13 +21,14 @@ scale = Vector2(0.45, 0.45)
 access = 2
 use_native_dialog = true
 
-[node name="SaveImageButton" type="Button" parent="." unique_id=2060540523]
-offset_left = 333.0
-offset_top = 735.0
-offset_right = 513.0
-offset_bottom = 788.0
-theme_override_font_sizes/font_size = 32
-text = "Save photo"
+[node name="SaveImageButton" type="TextureButton" parent="." unique_id=1543734531]
+offset_left = 231.0
+offset_top = 869.39996
+offset_right = 1432.0
+offset_bottom = 1297.3999
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("2_6ur52")
+texture_pressed = ExtResource("3_xrdy5")
 
 [node name="PercentageDisplay" type="Label" parent="." unique_id=1527757891]
 offset_left = 141.0
