@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Global="*uid://dw6w64aq6dx2l"
 ActiveBrush="*uid://b7rxpath0xqfx"
+DialogueManager="*uid://c3rodes2l3gxb"
 
 [display]
 
@@ -30,6 +31,10 @@ window/stretch/mode="canvas_items"
 [dotnet]
 
 project/assembly_name="FAMU Jam"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
 
 [physics]
 
