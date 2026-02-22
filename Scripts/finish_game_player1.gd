@@ -1,6 +1,13 @@
 extends Control
 
+@export var track_3: AudioStream
+
 func _ready():
+	var old_player = get_tree().root.get_node_or_null("CarriedMusicPlayer")
+	if old_player:
+		old_player.queue_free()
+	$AudioStreamPlayer2D.stream = track_3
+	$AudioStreamPlayer2D.play()
 	$HBoxContainer/FinishButton.pressed.connect(_on_finish_pressed)
 	var resource = load("res://Assets/main_dialogue.dialogue")
 	DialogueManager.show_dialogue_balloon(resource, "bathroom")
