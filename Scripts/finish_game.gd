@@ -62,9 +62,14 @@ func _on_finish_pressed():
 		final_image.blend_rect(hair_image, Rect2i(0, 0, hair_image.get_width(), hair_image.get_height()), Vector2i(0, 0))
 	var textureNumber = "0%d" % Global.selectedLevel
 	var should_be_image = load("res://Assets/with_makeup/%s.png" % textureNumber).get_image()
-	should_be_image.resize(1080, 1180, Image.Interpolation.INTERPOLATE_CUBIC)
-	var image_metrics = final_image.compute_image_metrics(should_be_image, false)
+	should_be_image.resize(108, 118)
+	
+	var compare_image = Image.create_empty(1080, 1180, false, Image.FORMAT_RGBA8)
+	compare_image.copy_from(final_image)
+	compare_image.resize(108, 118)
+	var image_metrics = compare_image.compute_image_metrics(should_be_image, false)
 	print(image_metrics)
+
 	Global.mean = image_metrics["mean"]
 	Global.final_image = final_image
 	var scene_path = "res://Scenes/End_scene.tscn"

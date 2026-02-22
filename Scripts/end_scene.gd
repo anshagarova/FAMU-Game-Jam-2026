@@ -16,7 +16,7 @@ func _on_save_pressed() -> void:
 func _ready() -> void:
 	$Sprite2D.texture = ImageTexture.create_from_image(Global.final_image)
 	$SaveImageButton.pressed.connect(_on_save_pressed)
-	var percentage = (1 - (Global.mean/7)) * 100
+	var percentage = (1 - (Global.mean/20)) * 100
 	percentage = max(percentage, 0)
 	print(percentage)
 	$PercentageDisplay.text = "You got it %d%% right!" % percentage
