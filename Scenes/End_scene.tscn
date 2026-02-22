@@ -22,10 +22,10 @@ access = 2
 use_native_dialog = true
 
 [node name="SaveImageButton" type="TextureButton" parent="." unique_id=1543734531]
-offset_left = 231.0
-offset_top = 869.39996
-offset_right = 1432.0
-offset_bottom = 1297.3999
+offset_left = 216.0
+offset_top = 83.00006
+offset_right = 1417.0
+offset_bottom = 511.00006
 scale = Vector2(0.2, 0.2)
 texture_normal = ExtResource("2_6ur52")
 texture_pressed = ExtResource("3_xrdy5")
