@@ -10,7 +10,7 @@
 [ext_resource type="Script" uid="uid://bkeswuixc4f" path="res://Scripts/makeup_brush_lipstick.gd" id="4_qswnl"]
 [ext_resource type="Texture2D" uid="uid://qut7rdxy8h8c" path="res://Assets/buttons/IMG_5625.png" id="4_xxbjm"]
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_v5su0"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_g6k5w"]
 light_mode = 1
 
 [node name="Node2D" type="Node2D" unique_id=1749975836]
@@ -48,7 +48,7 @@ rotation = -0.2355473
 texture_normal = ExtResource("4_xxbjm")
 
 [node name="ThinBrush" type="Node2D" parent="." unique_id=1683283584 node_paths=PackedStringArray("palette")]
-material = SubResource("CanvasItemMaterial_v5su0")
+material = SubResource("CanvasItemMaterial_g6k5w")
 script = ExtResource("2_v3fvj")
 min_width = 0.0
 palette = NodePath("../Pallet")

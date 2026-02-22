@@ -11,31 +11,6 @@ var hair_textures = [
 	preload("res://Assets/hair/06.png"),
 ]
 var current_hair = 0
-var hair_count = 6
-
-func _on_hair_one_pressed():
-	var hair_sprite = %Hair
-	hair_sprite.texture = load("res://Assets/hair/01.png")
-	
-func _on_hair_two_pressed():
-	var hair_sprite = %Hair
-	hair_sprite.texture = load("res://Assets/hair/02.png")
-	
-func _on_hair_three_pressed():
-	var hair_sprite = %Hair
-	hair_sprite.texture = load("res://Assets/hair/03.png")
-	
-func _on_hair_four_pressed():
-	var hair_sprite = %Hair
-	hair_sprite.texture = load("res://Assets/hair/04.png")
-	
-func _on_hair_five_pressed():
-	var hair_sprite = %Hair
-	hair_sprite.texture = load("res://Assets/hair/05.png")
-
-func _on_hair_six_pressed():
-	var hair_sprite = %Hair
-	hair_sprite.texture = load("res://Assets/hair/06.png")
 
 func _on_dialogue_ended(flags):
 	self.visible = true
