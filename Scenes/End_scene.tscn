@@ -9,30 +9,31 @@
 script = ExtResource("1_ebg4k")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1893854003]
-position = Vector2(673, 475)
-scale = Vector2(0.5, 0.5)
+position = Vector2(341, 471)
+scale = Vector2(0.45, 0.45)
 
 [node name="FileDialog" type="FileDialog" parent="." unique_id=1619764218]
 access = 2
 use_native_dialog = true
 
 [node name="SaveImageButton" type="Button" parent="." unique_id=2060540523]
-offset_left = 19.0
-offset_top = 60.0
-offset_right = 27.0
-offset_bottom = 68.0
-text = "Save"
+offset_left = 333.0
+offset_top = 735.0
+offset_right = 513.0
+offset_bottom = 788.0
+theme_override_font_sizes/font_size = 32
+text = "Save photo"
 
 [node name="PercentageDisplay" type="Label" parent="." unique_id=1527757891]
-offset_left = 144.0
-offset_top = 780.0
-offset_right = 451.0
-offset_bottom = 955.0
+offset_left = 141.0
+offset_top = 12.0
+offset_right = 448.0
+offset_bottom = 187.0
 theme_override_font_sizes/font_size = 128
 text = "TEstt"
 
 [node name="01" type="Sprite2D" parent="." unique_id=1139801416]
-position = Vector2(1484, 445)
+position = Vector2(1389, 523)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_nmk6v")
 
@@ -42,6 +43,7 @@ autoplay = true
 parameters/looping = true
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=504089707]
+z_index = -5
 offset_right = 40.0
 offset_bottom = 40.0
 mouse_filter = 2
