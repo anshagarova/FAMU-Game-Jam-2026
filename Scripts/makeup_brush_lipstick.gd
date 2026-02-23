@@ -1,5 +1,8 @@
 extends Node2D
 
+@export var canvas_node: Node
+var _canvas: Image
+
 @export var brush_radius: float = 10.0
 @export var softness: float = 0.2
 @export var bristle_count: int = 50
@@ -8,9 +11,6 @@ extends Node2D
 var brush_color: Color = Color(0.78, 0.12, 0.22, 1.0)
 var erase_mode: bool = false
 
-var _canvas: Image
-var _texture: ImageTexture
-var _sprite: Sprite2D
 var _rng := RandomNumberGenerator.new()
 var _last_pos: Vector2 = Vector2.INF
 var _painting: bool = false
@@ -19,24 +19,20 @@ var _painting: bool = false
 
 func _ready() -> void:
 	_rng.randomize()
-	_init_canvas()
 
+	if canvas_node == null:
+		push_error("Canvas node not assigned!")
+		return
+
+	if canvas_node.image == null:
+		await canvas_node.canvas_ready
+
+	_canvas = canvas_node.image
+	
 	if palette != null:
-		palette.color_changed.connect(func(c: Color): brush_color = c)
-		print("MakeupBrush: connected to palette")
-	else:
-		push_warning("MakeupBrush: no palette assigned in Inspector")
-
-func _init_canvas():
-	var vp_size = get_viewport_rect().size
-	_canvas = Image.create(int(vp_size.x), int(vp_size.y), false, Image.FORMAT_RGBA8)
-	_canvas.fill(Color(0, 0, 0, 0))
-	_texture = ImageTexture.create_from_image(_canvas)
-	_sprite = Sprite2D.new()
-	_sprite.texture = _texture
-	_sprite.centered = false
-	_sprite.position = Vector2.ZERO
-	add_child(_sprite)
+		palette.color_changed.connect(func(c: Color):
+			brush_color = c
+		)
 
 func _input(event: InputEvent) -> void:
 	if ActiveBrush.current_brush_style != "medium":
@@ -89,7 +85,7 @@ func _stamp(center: Vector2):
 		if px < 0 or py < 0 or px >= _canvas.get_width() or py >= _canvas.get_height():
 			continue
 		_paint_dot(px, py, _rng.randi_range(1, 2), alpha)
-	_texture.update(_canvas)
+	canvas_node.update_texture()
 
 func _paint_dot(cx: int, cy: int, r: int, alpha: float):
 	for dy in range(-r, r+1):
@@ -116,5 +112,5 @@ func _paint_dot(cx: int, cy: int, r: int, alpha: float):
 
 func clear():
 	_canvas.fill(Color(0,0,0,0))
-	_texture.update(_canvas)
+	canvas_node.update_texture()
 	_last_pos = Vector2.INF

@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://bx83igllljdg" path="res://Scripts/controller.gd" id="3_v3fvj"]
 [ext_resource type="Script" uid="uid://bkeswuixc4f" path="res://Scripts/makeup_brush_lipstick.gd" id="4_qswnl"]
 [ext_resource type="Texture2D" uid="uid://qut7rdxy8h8c" path="res://Assets/buttons/IMG_5625.png" id="4_xxbjm"]
+[ext_resource type="Script" uid="uid://bxem63pqcr21p" path="res://Scripts/paint_canvas.gd" id="8_tn73o"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_g6k5w"]
 light_mode = 1
@@ -47,19 +48,25 @@ offset_bottom = 513.38275
 rotation = -0.2355473
 texture_normal = ExtResource("4_xxbjm")
 
-[node name="ThinBrush" type="Node2D" parent="." unique_id=1683283584 node_paths=PackedStringArray("palette")]
+[node name="ThinBrush" type="Node2D" parent="." unique_id=1683283584 node_paths=PackedStringArray("canvas_node", "palette")]
 material = SubResource("CanvasItemMaterial_g6k5w")
 script = ExtResource("2_v3fvj")
+canvas_node = NodePath("../Canvas")
 min_width = 0.0
 palette = NodePath("../Pallet")
 
-[node name="SoftBrush" type="Node2D" parent="." unique_id=702286414 node_paths=PackedStringArray("palette")]
+[node name="SoftBrush" type="Node2D" parent="." unique_id=702286414 node_paths=PackedStringArray("canvas_node", "palette")]
 script = ExtResource("3_qswnl")
+canvas_node = NodePath("../Canvas")
 palette = NodePath("../Pallet")
 
-[node name="MediumBrush" type="Node2D" parent="." unique_id=421744736 node_paths=PackedStringArray("palette")]
+[node name="MediumBrush" type="Node2D" parent="." unique_id=421744736 node_paths=PackedStringArray("canvas_node", "palette")]
 script = ExtResource("4_qswnl")
+canvas_node = NodePath("../Canvas")
 palette = NodePath("../Pallet")
+
+[node name="Canvas" type="Node2D" parent="." unique_id=816955360]
+script = ExtResource("8_tn73o")
 
 [node name="Pallet" type="Control" parent="." unique_id=1676433088]
 layout_mode = 3

@@ -1,43 +1,36 @@
 @tool
 extends Node2D
 
+@export var canvas_node: Node
+var _canvas: Image
+
 @export var max_width: float = 6.0
 @export var min_width: float = 1.8
 @export var tip_sharpness: float = 0.18
 @export var palette: Node
 
+var _rng := RandomNumberGenerator.new()
 var drawing = false
 var strokes = []
 var current_stroke = []
 var brush_color: Color = Color.RED
-var _canvas: Image
-var _texture: ImageTexture
-var _sprite: Sprite2D
 
-func _init_canvas():
-	var vp_size = get_viewport_rect().size
-	_canvas = Image.create(int(vp_size.x), int(vp_size.y), false, Image.FORMAT_RGBA8)
-	_canvas.fill(Color(0, 0, 0, 0))
-	_texture = ImageTexture.create_from_image(_canvas)
-	_sprite = Sprite2D.new()
-	_sprite.texture = _texture
-	_sprite.centered = false
-	_sprite.position = Vector2.ZERO
-	add_child(_sprite)
+func _ready() -> void:
+	_rng.randomize()
 
-func _ready():
-	_init_canvas()
-	var mat = CanvasItemMaterial.new()
-	mat.light_mode = CanvasItemMaterial.LIGHT_MODE_UNSHADED
-	material = mat
-	modulate = Color(1, 1, 1, 1)
+	if canvas_node == null:
+		push_error("Canvas node not assigned!")
+		return
+
+	if canvas_node.image == null:
+		await canvas_node.canvas_ready
+
+	_canvas = canvas_node.image
+	
 	if palette != null:
 		palette.color_changed.connect(func(c: Color):
 			brush_color = c
 		)
-		print("Connected to palette")
-	else:
-		push_warning("No palette assigned")
 
 func _input(event):
 	if ActiveBrush.current_brush_style != "thin":
@@ -74,7 +67,7 @@ func _input(event):
 			var w1 = _width_at(t1)
 
 			_stamp_segment(a, b, w0, w1, current_stroke["color"])
-			_texture.update(_canvas)
+			canvas_node.update_texture()
 
 func _stamp_segment(a: Vector2, b: Vector2, w0: float, w1: float, color: Color):
 	var dir = (b - a).normalized()
