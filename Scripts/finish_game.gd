@@ -23,6 +23,7 @@ func _ready():
 		old_player.queue_free()
 	$AudioStreamPlayer2D.stream = track_3
 	$AudioStreamPlayer2D.play()
+	$AudioStreamPlayer2D.finished.connect(func(): $AudioStreamPlayer2D.play())
 	self.visible = false
 	var paintingScene = %paintingScene
 	paintingScene.visible = false

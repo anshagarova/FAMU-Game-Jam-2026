@@ -22,13 +22,13 @@ func _start_music():
 	if music_player.stream != track_1:
 		music_player.stream = track_1
 		music_player.play()
+		music_player.finished.connect(func(): $AudioStreamPlayer2D.play())
 		
 func _on_playback_finished():
 	var video_player = $VideoStreamPlayer
 	video_player.stream = load("res://Assets/upir_v_rakvi_loop.ogv")
 	video_player.loop = true
 	video_player.play()
-	
 
 func _on_play_button_pressed():
 	var video_player = $VideoStreamPlayer
