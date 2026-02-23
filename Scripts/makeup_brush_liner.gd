@@ -2,13 +2,12 @@
 extends Node2D
 
 @export var canvas_node: Node
-var _canvas: Image
-
 @export var max_width: float = 6.0
 @export var min_width: float = 1.8
 @export var tip_sharpness: float = 0.18
 @export var palette: Node
 
+var _canvas: Image
 var _rng := RandomNumberGenerator.new()
 var drawing = false
 var strokes = []
@@ -35,7 +34,6 @@ func _ready() -> void:
 func _input(event):
 	if ActiveBrush.current_brush_style != "thin":
 		return
-
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			drawing = event.pressed
@@ -44,28 +42,23 @@ func _input(event):
 					"points": [],
 					"color": brush_color
 				}
-				current_stroke["points"].append(event.position)
+				var local = canvas_node.to_canvas_coords(event.position)
+				current_stroke["points"].append(local)
 				strokes.append(current_stroke)
-
 	elif event is InputEventMouseMotion and drawing:
 		var pts = current_stroke["points"]
-
-		if pts.size() > 0 and pts[-1].distance_to(event.position) < 2.0:
+		var local = canvas_node.to_canvas_coords(event.position)
+		if pts.size() > 0 and pts[-1].distance_to(local) < 2.0:
 			return
-
-		pts.append(event.position)
-
+		pts.append(local)
 		var new_index = pts.size() - 1
 		if new_index > 0:
 			var a = pts[new_index - 1]
 			var b = pts[new_index]
-
 			var t0 = float(new_index - 1) / float(pts.size())
 			var t1 = float(new_index) / float(pts.size())
-
 			var w0 = _width_at(t0)
 			var w1 = _width_at(t1)
-
 			_stamp_segment(a, b, w0, w1, current_stroke["color"])
 			canvas_node.update_texture()
 

@@ -2,8 +2,6 @@
 extends Node2D
 
 @export var canvas_node: Node
-var _canvas: Image
-
 @export var brush_radius: float = 30.0
 @export var softness: float = 0.85
 @export var bristle_count: int = 120
@@ -12,6 +10,7 @@ var _canvas: Image
 @export var erase_mode: bool = false
 @export var palette: Node
 
+var _canvas: Image
 var _rng := RandomNumberGenerator.new()
 var _last_pos: Vector2 = Vector2.INF
 var _painting: bool = false
@@ -65,9 +64,10 @@ func paint_motion(pos: Vector2):
 		_try_stamp(pos)
 
 func _try_stamp(pos: Vector2):
-	if _last_pos.distance_to(pos) >= spacing or _last_pos == Vector2.INF:
-		_stamp(pos)
-		_last_pos = pos
+	var local_pos = canvas_node.to_canvas_coords(pos)
+	if _last_pos.distance_to(local_pos) >= spacing or _last_pos == Vector2.INF:
+		_stamp(local_pos)
+		_last_pos = local_pos
 
 func _stamp(center: Vector2):
 	for i in bristle_count:
