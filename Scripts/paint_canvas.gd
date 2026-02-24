@@ -12,7 +12,7 @@ var canvas_offset: Vector2
 func _ready():
 	var vp_size = get_viewport_rect().size
 	
-	canvas_offset = Vector2(
+	canvas_offset = Vector2i(
 		(vp_size.x - CANVAS_WIDTH) / 2.0+25,
 		(vp_size.y - CANVAS_HEIGHT) / 2.0
 	)
