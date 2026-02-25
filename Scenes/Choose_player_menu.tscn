@@ -5,7 +5,7 @@
 [ext_resource type="VideoStream" uid="uid://dp8grnapu8n0u" path="res://Assets/dum_a_dest.ogv" id="2_emfgf"]
 [ext_resource type="Texture2D" uid="uid://bn2lrxg4qnmkp" path="res://Assets/buttons/IMG_5638.png" id="3_raohk"]
 [ext_resource type="Texture2D" uid="uid://bv5hbqmin61qs" path="res://Assets/buttons/IMG_5637.png" id="4_f6i3p"]
-[ext_resource type="Texture2D" uid="uid://741onmuvg0il" path="res://Assets/buttons/IMG_5636.png" id="6_f6i3p"]
+[ext_resource type="Texture2D" uid="uid://b1jgmujr2bk24" path="res://Assets/player_select.png" id="6_ve7s0"]
 [ext_resource type="Texture2D" uid="uid://t5o2mfsocwkv" path="res://Assets/level_select.png" id="7_ve7s0"]
 [ext_resource type="Texture2D" uid="uid://bslvhh6vrqham" path="res://Assets/buttons/01.png" id="8_xoe8g"]
 [ext_resource type="Texture2D" uid="uid://cljcdamvm03fe" path="res://Assets/buttons/01_pressed.png" id="9_o5eci"]
@@ -72,7 +72,7 @@ loop = true
 layout_mode = 0
 offset_right = 1918.0
 offset_bottom = 1082.0
-texture = ExtResource("6_f6i3p")
+texture = ExtResource("6_ve7s0")
 expand_mode = 2
 
 [node name="LevelSelect" type="Sprite2D" parent="." unique_id=1579540160]
